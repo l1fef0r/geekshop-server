@@ -56,6 +56,7 @@
                     </a>
                 </div>
 
+
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 mb-4">
@@ -67,10 +68,10 @@
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Худи черного цвета с монограммами adidas Originals</a>
+                                    <a href="#">{{ products.0.name|capfirst }}</a>
                                 </h4>
-                                <h5>6 090,00 руб.</h5>
-                                <p class="card-text">Мягкая ткань для свитшотов. Стиль и комфорт – это образ жизни.</p>
+                                <h5>{{ products.0.price }} руб.</h5>
+                                <p class="card-text">{{ products.0.describe|capfirst }}</p>
                             </div>
                             <div class="card-footer text-center">
                                 <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
@@ -86,11 +87,11 @@
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Синяя куртка The North Face</a>
+                                    <a href="#">{{ products.1.name|capfirst }}</a>
                                 </h4>
-                                <h5>23 725,00 руб.</h5>
+                                <h5>{{ products.1.price }} руб.</h5>
                                 <p class="card-text">
-                                    Гладкая ткань. Водонепроницаемое покрытие. Легкий и теплый пуховый наполнитель.
+                                    {{ products.1.describe|capfirst }}
                                 </p>
                             </div>
                             <div class="card-footer text-center">
@@ -108,10 +109,10 @@
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Коричневый спортивный oversized-топ ASOS DESIGN</a>
+                                    <a href="#">{{ products.2.name|capfirst }}</a>
                                 </h4>
-                                <h5>3 390,00 руб.</h5>
-                                <p class="card-text">Материал с плюшевой текстурой. Удобный и мягкий.</p>
+                                <h5>{{ products.2.price }} руб.</h5>
+                                <p class="card-text">{{ products.2.describe|capfirst }}</p>
                             </div>
                             <div class="card-footer text-center">
                                 <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
@@ -128,10 +129,10 @@
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Черный рюкзак Nike Heritage</a>
+                                    <a href="#">{{ products.3.name|capfirst }}</a>
                                 </h4>
-                                <h5>2 340,00 руб.</h5>
-                                <p class="card-text">Плотная ткань. Легкий материал.</p>
+                                <h5>{{ products.3.price }} руб.</h5>
+                                <p class="card-text">{{ products.3.describe|capfirst }}</p>
                             </div>
                             <div class="card-footer text-center">
                                 <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
@@ -148,10 +149,10 @@
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Черные туфли на платформе с 3 парами люверсов Dr Martens 1461 Bex</a>
+                                    <a href="#">{{ products.4.name|capfirst }}</a>
                                 </h4>
-                                <h5>13 590,00 руб.</h5>
-                                <p class="card-text">Гладкий кожаный верх. Натуральный материал.</p>
+                                <h5>{{ products.4.price }} руб.</h5>
+                                <p class="card-text">{{ products.4.describe|capfirst }}</p>
                             </div>
                             <div class="card-footer text-center">
                                 <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
@@ -168,10 +169,10 @@
                             </a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Темно-синие широкие строгие брюки ASOS DESIGN</a>
+                                    <a href="#">{{ products.5.name|capfirst }}</a>
                                 </h4>
-                                <h5>2 890,00 руб.</h5>
-                                <p class="card-text">Легкая эластичная ткань сирсакер Фактурная ткань.</p>
+                                <h5>{{ products.5.price }}  руб.</h5>
+                                <p class="card-text">{{ products.5.describe|capfirst }}</p>
                             </div>
                             <div class="card-footer text-center">
                                 <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
