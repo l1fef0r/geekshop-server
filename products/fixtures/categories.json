@@ -1,0 +1,27 @@
+[
+  {
+      "name": "Новинки",
+      "description": null,
+      "url": "/news"
+  },
+  {
+      "name": "Обувь",
+      "description": null,
+      "url": "/shoes"
+  },
+  {
+      "name": "Одежда",
+      "description": null,
+      "url": "/clothes"
+  },
+  {
+      "name": "Аксессуары",
+      "description": null,
+      "url": "/features"
+  },
+  {
+      "name": "Подарки",
+      "description": null,
+      "url": "/gives"
+  }
+]
