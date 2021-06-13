@@ -8,31 +8,40 @@ from baskets.models import Basket
 
 
 def login(request):
+    send = 'Войдите в свой аккаунт'
     if request.method == 'POST':
         form = UserLoginForm(data=request.POST)
         if form.is_valid():
+
             username = request.POST['username']
             password = request.POST['password']
             user = auth.authenticate(username=username, password=password)
             if user and user.is_active:
                 auth.login(request, user)
                 return HttpResponseRedirect(reverse('index'))
+        else:
+            send = ''
+            print(form.errors)
     else:
         form = UserLoginForm()
-    context = {'title': 'GeekShop - Авторизация', 'form': form}
+    context = {'title': 'GeekShop - Авторизация', 'form': form, 'send': send}
     return render(request, 'users/login.html', context)
 
 
 def register(request):
+    send = 'Зарегестрируйтесь!'
     if request.method == 'POST':
         form = UserRegisterForm(data=request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Вы успешно зарегестрировались!')
             return HttpResponseRedirect(reverse('users:login'))
+        else:
+            send = ''
+            print(form.errors)
     else:
         form = UserRegisterForm()
-    context = {'title': 'GeekShop - Регистрация', 'form': form}
+    context = {'title': 'GeekShop - Регистрация', 'form': form, 'send': send,}
     return render(request, 'users/register.html', context)
 
 
