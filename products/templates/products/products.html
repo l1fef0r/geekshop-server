@@ -14,8 +14,8 @@
 
                 <h1 class="my-4">GeekShop</h1>
                 <div class="list-group">
-                    {% for cat in categories %}
-                        <a href="{{ cat.url }}" class="list-group-item">{{ cat.name }}</a>
+                    {% for category in categories %}
+                        <a href="#" class="list-group-item">{{ category.name }}</a>
                     {% endfor %}
                 </div>
 
@@ -61,7 +61,7 @@
                             <div class="card h-100">
                                 <a href="#">
                                     <img class="card-img-top"
-                                         src="/media/{{ product.image }}"
+                                         src="{{ product.image.url }}"
                                          alt="">
                                 </a>
                                 <div class="card-body">
@@ -72,7 +72,9 @@
                                     <p class="card-text">{{ product.description }}</p>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
+                                    <a href="{% url 'baskets:basket_add' product.id %}" class="btn btn-outline-success">
+                                        Отправить в корзину
+                                    </a>
                                 </div>
                             </div>
                         </div>
